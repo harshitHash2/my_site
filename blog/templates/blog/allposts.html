@@ -15,11 +15,10 @@
 <section id="all-posts">
     <h2> My All Posts </h2>
     <ul>
+        {% for post in all_p %}
         {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
+        
+        {%endfor%}
 
     </ul>
 </section>
