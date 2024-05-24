@@ -3,27 +3,18 @@
 
 {% block title %} My first blog {% endblock %}
 
-{% block css_files %} <link rel="stylesheet" href="{% static "blog/index.css" %}" > {% endblock %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/post.css" %}">
+<link rel="stylesheet" href="{% static "blog/index.css" %}" > {% endblock %}
 
 {% block content %}
 
 
-<header id="main-navigation">
-   
 
-    <h1> <a href=""> HasH Blog </a></h1>
-
-    <nav>
-        <a href=""> allposts </a>
-       
-
-
-    </nav>
-</header>
 
 <section id="welcome">
     <header> 
-        <img src="" alt="My post title is like amoyntajnn">
+        <img src="{% static "blog/images/66.jpg" %}" alt="My post title is like amoyntajnn">
         <h2> Its #Hash </h2>
 
     </header>
@@ -36,18 +27,7 @@
 <section id="latest-posts">
     <h2> My latest posts </h2>
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src="" alt="Mountain Hiking">
-                    <div class="post__content">
-                        <h2> Post titkle </h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quaerat inventore quisquam sapiente deserunt et odit, labore at debitis dignissimos adipisci incidunt deleniti minus aliquam ad fugiat aspernatur doloribus explicabo repudiandae error. In tempora optio quisquam sint, illum cumque nostrum ut, suscipit recusandae itaque voluptatum unde iure consequatur? Incidunt distinctio ipsa, possimus placeat perferendis ea?
-                             </p>
-                    </div>
-                </a>
-            </arcticle>
-        </li>
+        {% include "blog/includes/post.html" %}
     </ul>
 </section>
 

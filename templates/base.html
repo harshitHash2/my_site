@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="{% static "app.css" %}">
 </head>
 <body>
+    <header id="main-navigation">
+   
+
+        <h1> <a href=" {% url "starting-page" %}"> HasH Blog </a></h1>
+    
+        <nav>
+            <a href="{% url "all-posts" %}"> allposts </a>
+           
+    
+    
+        </nav>
+    </header>
     {% block content %}
 
     {% endblock %}
